@@ -3,8 +3,10 @@ The Android version of the instant messaging package contains: text, files, pict
 
 # Usage
 
-chat.x.connect("https://your-socket-server.com", userId)
-
-chat.x.sendTextMessage(receiverId: String, content: String)
-
-chat.x.sendImageMessage(friendId, imageUri)
+@Composable
+fun excute(){
+   val x = remember { chat.x }
+   x.connect("https://your-socket-server.com", userId)
+   x.sendTextMessage(receiverId: String, content: String)
+   x.sendImageMessage(friendId, imageUri)
+}
